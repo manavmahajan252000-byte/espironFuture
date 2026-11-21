@@ -11,6 +11,8 @@
 <meta property="og:description" content="Pick the right stream, course and college after 10th and 12th. Book free counselling with Espiron Future in Amritsar.">
 <meta property="og:url" content="https://www.espironfuture.com/">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"EducationalOrganization","name":"Espiron Future","url":"https://www.espironfuture.com/","email":"hello@espironfuture.com","telephone":"+918360363971","address":{"@type":"PostalAddress","addressLocality":"Amritsar","addressRegion":"Punjab","addressCountry":"IN"},"sameAs":["https://www.instagram.com/espironfutureofficial"]}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZYJTKP8LN2"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-ZYJTKP8LN2");</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -723,7 +725,7 @@ footer p { max-width: 46em; }
   <h3>Why we collect it</h3>
   <p>To contact you about career counselling and to prepare for your counselling call.</p>
   <h3>How it reaches us</h3>
-  <p>The form does not store your details on this website. It prepares a WhatsApp message, and your details reach us when you send that message. This site loads fonts from Google Fonts.</p>
+  <p>The form does not store your details on this website. It prepares a WhatsApp message, and your details reach us when you send that message. This site loads fonts from Google Fonts. We use Google Analytics to count visits and see which pages are useful. It does not receive your name or phone number. If we run ads on Instagram or Facebook, Meta's measurement tools may also record visits to this site from those ads.</p>
   <h3>Sharing</h3>
   <ul>
     <li>We do not sell your details.</li>
@@ -740,7 +742,8 @@ footer p { max-width: 46em; }
 /* Set these two before going live. */
 var CONFIG = {
   whatsapp: "918360363971",          // country code + number, digits only
-  partnerEmail: "hello@espironfuture.com" // replace with the address you use
+  partnerEmail: "hello@espironfuture.com", // replace with the address you use
+  metaPixel: ""                       // paste your Meta Pixel ID here (digits only) when you have it
 };
 
 (function () {
@@ -808,6 +811,7 @@ var CONFIG = {
       wa.style.display = "none";
       $("previewNote").hidden = false;
     }
+    track("generate_lead", "Lead", { lead_class: cls, lead_stream: stream });
     $("formWrap").classList.add("hide");
     $("done").classList.add("show");
   });
@@ -938,6 +942,24 @@ var CONFIG = {
   document.querySelectorAll("[data-open-privacy]").forEach(function (b) { b.addEventListener("click", openPv); });
   document.getElementById("pvClose").addEventListener("click", function () { if (dlg.close) dlg.close(); else dlg.removeAttribute("open"); });
   dlg.addEventListener("click", function (e) { if (e.target === dlg && dlg.close) dlg.close(); });
+})();
+
+/* Analytics helpers. No names or phone numbers are ever sent. */
+function track(gaEvent, metaEvent, params) {
+  try { if (window.gtag) gtag("event", gaEvent, params || {}); } catch (e) {}
+  try { if (metaEvent && window.fbq) fbq("track", metaEvent); } catch (e) {}
+}
+(function () {
+  if (CONFIG.metaPixel && /^\d{8,20}$/.test(CONFIG.metaPixel)) {
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version="2.0";n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");
+    fbq("init", CONFIG.metaPixel); fbq("track", "PageView");
+  }
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest ? e.target.closest("a, button") : null;
+    if (!a) return;
+    if (a.id === "waBtn" || a.hasAttribute("data-wa")) track("click_whatsapp", "Contact", { location: a.id === "waBtn" ? "form" : "contact_section" });
+    else if (a.hasAttribute("data-tel")) track("click_call", "Contact", {});
+  });
 })();
 </script>
 </body>
