@@ -196,8 +196,9 @@ dialog#privacy ul { margin: 6px 0 0; padding-left: 20px; }
 dialog#privacy .close { margin-top: 22px; }
 .flinks { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 12px; font-size: 14.5px; }
 .flinks a, .flinks button { color: #fff; background: none; border: 0; padding: 0; font: inherit; text-decoration: underline; cursor: pointer; }
-@media (max-width: 920px) { .cgrid { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 560px) { .cgrid { grid-template-columns: 1fr; } }
+.ggrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+@media (max-width: 920px) { .cgrid { grid-template-columns: 1fr 1fr; } .ggrid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .cgrid { grid-template-columns: 1fr; } .ggrid { grid-template-columns: 1fr; } }
 
 /* Footer */
 footer { background: var(--navy); color: #c5d0e6; padding: 44px 0; font-size: 14.5px; }
@@ -303,6 +304,7 @@ footer p { max-width: 46em; }
     <nav class="nav-links" aria-label="Main">
       <a href="#how">How it works</a>
       <a href="#paths">Career paths</a>
+      <a href="#guides">Guides</a>
       <a href="#roadmap">Free roadmap</a>
       <a href="#partners">For universities</a>
       <a href="#contact">Contact</a>
@@ -609,6 +611,22 @@ footer p { max-width: 46em; }
     </div>
   </section>
 
+
+  <section class="guides" id="guides" aria-labelledby="gd-h">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Free guides</span>
+        <h2 id="gd-h">Read before you decide.</h2>
+        <p>Plain-language guides to courses, exams and colleges, written for students and parents in Punjab.</p>
+      </div>
+      <div class="ggrid">
+        <a class="ccard" href="courses-after-12th-science/"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f39a1e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6M10 3v6l-5 9a2 2 0 002 3h10a2 2 0 002-3l-5-9V3"/></svg></span><span class="lbl">After 12th Science</span><span class="val">Courses after 12th Science: PCM, PCB and exams</span><span class="hint">Engineering, medicine, architecture and science degrees.</span></a>
+        <a class="ccard" href="courses-after-12th-commerce/"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f39a1e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span><span class="lbl">After 12th Commerce</span><span class="val">Courses after 12th Commerce: CA, BBA, law and more</span><span class="hint">How each route is entered and how to choose.</span></a>
+        <a class="ccard" href="career-options-in-punjab/"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f39a1e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-5.2-7-11a7 7 0 0114 0c0 5.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span class="lbl">Punjab</span><span class="val">Career options in Punjab after 12th</span><span class="hint">Sectors, courses and colleges close to home.</span></a>
+      </div>
+    </div>
+  </section>
+
   <section id="trust" aria-labelledby="trust-h">
     <div class="wrap">
       <div class="sec-head reveal">
@@ -709,6 +727,7 @@ footer p { max-width: 46em; }
       <p style="margin-top:10px">www.espironfuture.com<br>Amritsar, Punjab</p>
       <div class="flinks">
         <a href="https://www.instagram.com/espironfutureofficial" target="_blank" rel="noopener">Instagram</a>
+        <a href="#guides">Guides</a>
         <a href="#contact">Contact</a>
         <button type="button" data-open-privacy>Privacy policy</button>
       </div>
@@ -942,6 +961,7 @@ var CONFIG = {
   document.querySelectorAll("[data-open-privacy]").forEach(function (b) { b.addEventListener("click", openPv); });
   document.getElementById("pvClose").addEventListener("click", function () { if (dlg.close) dlg.close(); else dlg.removeAttribute("open"); });
   dlg.addEventListener("click", function (e) { if (e.target === dlg && dlg.close) dlg.close(); });
+  if (location.hash === "#privacy") { try { dlg.showModal(); } catch (err) {} }
 })();
 
 /* Analytics helpers. No names or phone numbers are ever sent. */
