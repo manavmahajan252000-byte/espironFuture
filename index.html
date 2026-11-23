@@ -362,6 +362,26 @@ footer p { max-width: 46em; }
 .soon-cta p { margin: 0; max-width: 34em; color: var(--muted); font-size: 17px; }
 @media (max-width: 920px) { .soon-grid { grid-template-columns: 1fr; } }
 @media (prefers-reduced-motion: reduce) { .soon-card .blur { transition: none; } }
+
+/* ---------- Smaller, lighter type ---------- */
+.logo { font-weight: 700; font-size: 21px; }
+.hero h1 { font-size: clamp(30px, 4vw, 44px); font-weight: 600; line-height: 1.15; }
+.hero .lead { font-size: 17px; }
+.sec-head h2, .magnet h2, .partner h2 { font-size: clamp(25px, 3vw, 34px); font-weight: 600; line-height: 1.18; }
+.sec-head p { font-size: 17px; }
+.card h2 { font-size: 24px; font-weight: 600; }
+.booklet h3 { font-size: 30px; font-weight: 700; }
+.stage-panel h3 { font-size: 24px; font-weight: 600; }
+.stage .name { font-weight: 600; font-size: 17px; }
+.step h3, .path h3, .person h3, .soon-card h3 { font-size: 18px; font-weight: 600; }
+.points h3 { font-size: 17px; font-weight: 600; }
+.pickbtn .pk-t { font-size: 22px; font-weight: 600; }
+.pickbtn .pk-d { font-size: 15px; }
+.ccard .val { font-weight: 600; font-size: 17px; }
+summary { font-weight: 600; font-size: 17.5px; }
+.step .pin { font-weight: 700; }
+.btn { font-weight: 600; }
+@media (max-width: 560px) { .pickbtn .pk-t { font-size: 20px; } .hero h1 { font-size: 29px; } }
 </style>
 </head>
 <body>
@@ -740,7 +760,7 @@ footer p { max-width: 46em; }
       <div class="sec-head reveal">
         <span class="eyebrow">Coming soon</span>
         <h2 id="soon-h">Already working? Your next move is being mapped.</h2>
-        <p>Espiron Future is building something for professionals who want to grow, switch or get ahead. We are not ready to show it all yet.</p>
+        <p>Espiron Future is building something for professionals who want to grow, switch or get ahead. Here is a first look.</p>
       </div>
       <div class="soon-grid">
         <div class="soon-card">
