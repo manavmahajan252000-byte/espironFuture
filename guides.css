@@ -1,6 +1,6 @@
 :root {
-  --navy: #0e1f3d; --navy-2: #17305c; --cream: #faf3e3; --paper: #fffaf0; --saffron: #f39a1e;
-  --ink: #1b2538; --muted: #5c6678; --line: #e3d8bf;
+  --navy: #2b4166; --navy-2: #38527d; --cream: #f6f3ec; --paper: #fbf9f4; --saffron: #e9a443;
+  --ink: #263043; --muted: #5f6b7d; --line: #e1dccd;
   --display: "Bricolage Grotesque", "Trebuchet MS", system-ui, sans-serif;
   --body: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
   color-scheme: light;

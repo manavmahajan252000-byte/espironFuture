@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Espiron Future</title>
 <meta name="description" content="Free career counselling for students after 10th and 12th. Pick the right stream, course and college with Espiron Future.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230e1f3d'/%3E%3Ctext x='32' y='46' font-size='40' font-weight='800' text-anchor='middle' fill='%23f39a1e' font-family='Arial,sans-serif'%3EE%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232b4166'/%3E%3Ctext x='32' y='46' font-size='40' font-weight='800' text-anchor='middle' fill='%23e9a443' font-family='Arial,sans-serif'%3EE%3C/text%3E%3C/svg%3E">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Espiron Future | Free career counselling">
 <meta property="og:description" content="Pick the right stream, course and college after 10th and 12th. Book free counselling with Espiron Future in Amritsar.">
@@ -20,14 +20,14 @@
 /* Layout idea: a "roadmap" page. Navy hero with the booking form beside the headline, then cream sections
    joined by one saffron route line that runs through the four counselling steps. */
 :root {
-  --navy: #0e1f3d;
-  --navy-2: #17305c;
-  --cream: #faf3e3;
-  --paper: #fffaf0;
-  --saffron: #f39a1e;
-  --ink: #1b2538;
-  --muted: #5c6678;
-  --line: #e3d8bf;
+  --navy: #2b4166;
+  --navy-2: #38527d;
+  --cream: #f6f3ec;
+  --paper: #fbf9f4;
+  --saffron: #e9a443;
+  --ink: #263043;
+  --muted: #5f6b7d;
+  --line: #e1dccd;
   --display: "Bricolage Grotesque", "Trebuchet MS", system-ui, sans-serif;
   --body: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
   color-scheme: light;
@@ -81,7 +81,7 @@ p { margin: 0; }
 .field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
 .field label { font-weight: 600; font-size: 14px; }
 .field input, .field select { font: 500 16px var(--body); color: var(--ink); background: #fff; border: 1.5px solid var(--line); border-radius: 12px; padding: 13px 14px; width: 100%; }
-.field input:focus, .field select:focus { border-color: var(--navy); outline: 3px solid rgba(243,154,30,.45); }
+.field input:focus, .field select:focus { border-color: var(--navy); outline: 3px solid rgba(233,164,67,.45); }
 .field .err { color: #b3261e; font-size: 13px; min-height: 0; display: none; }
 .field.bad input, .field.bad select { border-color: #b3261e; }
 .field.bad .err { display: block; }
@@ -209,12 +209,12 @@ footer p { max-width: 46em; }
 
 /* ---------- Spatial effects ---------- */
 .hero::before { content: ""; position: absolute; inset: 0; pointer-events: none;
-  background: radial-gradient(520px circle at var(--mx, 70%) var(--my, 25%), rgba(243,154,30,.17), transparent 62%); }
+  background: radial-gradient(520px circle at var(--mx, 70%) var(--my, 25%), rgba(233,164,67,.17), transparent 62%); }
 .hero .wrap { position: relative; z-index: 1; }
 
 .orbit { position: relative; height: 200px; margin-top: 26px; display: grid; place-items: center; perspective: 900px; --r: 190px; }
 .orbit-core { position: absolute; width: 84px; height: 84px; border-radius: 50%; background: var(--saffron); color: var(--navy);
-  font: 800 17px var(--display); display: grid; place-items: center; box-shadow: 0 0 0 10px rgba(243,154,30,.18), 0 0 48px rgba(243,154,30,.55); }
+  font: 800 17px var(--display); display: grid; place-items: center; box-shadow: 0 0 0 10px rgba(233,164,67,.18), 0 0 48px rgba(233,164,67,.55); }
 .orbit-tilt { position: relative; width: 0; height: 0; transform-style: preserve-3d; transform: rotateX(-12deg) rotateY(0deg); transition: transform .25s ease-out; z-index: 1; }
 .orbit-ring { position: absolute; left: 0; top: 0; width: 0; height: 0; transform-style: preserve-3d; animation: orbit-spin 30s linear infinite; }
 .orbit:hover .orbit-ring { animation-play-state: paused; }
@@ -222,7 +222,7 @@ footer p { max-width: 46em; }
 .chip { position: absolute; left: 0; top: 0; transform: translate(-50%, -50%) rotateY(calc(var(--i) * 60deg)) translateZ(var(--r));
   backface-visibility: hidden; white-space: nowrap; padding: 10px 16px; border-radius: 999px; font: 700 14px var(--body); color: #fff;
   background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.3); backdrop-filter: blur(4px); box-shadow: 0 10px 24px -8px rgba(0,0,0,.5); }
-.chip:nth-child(odd) { background: rgba(243,154,30,.2); border-color: rgba(243,154,30,.65); }
+.chip:nth-child(odd) { background: rgba(233,164,67,.2); border-color: rgba(233,164,67,.65); }
 
 .tilt { position: relative; transform-style: preserve-3d; transition: transform .18s ease-out, box-shadow .18s ease-out; will-change: transform; }
 .tilt::after { content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; opacity: 0; transition: opacity .2s;
@@ -294,6 +294,37 @@ footer p { max-width: 46em; }
   html { scroll-behavior: auto; }
   .btn { transition: none; }
 }
+
+/* ---------- Calm palette and chooser ---------- */
+.hero { background: linear-gradient(160deg, #2b4166, #334c75); }
+.hero::before { background: radial-gradient(520px circle at var(--mx, 70%) var(--my, 25%), rgba(233,164,67,.08), transparent 62%); }
+.hero h1 .mark { background: linear-gradient(transparent 70%, rgba(233,164,67,.55) 70%, rgba(233,164,67,.55) 92%, transparent 92%); }
+.hero .lead { color: #dde4f1; }
+.hero-sub { margin-top: 18px; font-size: 15.5px; color: #dde4f1; }
+.hero-sub a { color: #fff; text-underline-offset: 3px; }
+.orbit-core { box-shadow: 0 0 0 8px rgba(233,164,67,.14), 0 0 26px rgba(233,164,67,.28); }
+.card { box-shadow: 0 20px 44px -26px rgba(20,32,56,.4); }
+.btn-saffron:hover { background: #f0b256; }
+.booklet { box-shadow: 12px 12px 0 rgba(233,164,67,.65); }
+.note-watch, .preview-note { background: #f8efd9; border-color: #e8d6a6; }
+.paths { background: #e8edf3; color: var(--ink); }
+.paths .sec-head .eyebrow { color: #a8650b; }
+.paths .sec-head p, .paths .note, .path p { color: var(--muted); }
+.tab { color: var(--navy); border-color: rgba(43,65,102,.35); }
+.tab[aria-selected="true"] { background: var(--navy); color: #fff; border-color: var(--navy); }
+.path { background: #fff; border: 1px solid var(--line); }
+.path .exams { color: #a8650b; }
+.guides { padding-top: 64px; }
+.pick { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 26px; }
+.pickbtn { text-align: left; background: #fff; color: var(--ink); border: 2px solid var(--line); border-radius: 20px; padding: 22px 24px; cursor: pointer; font-family: var(--body); transition: transform .15s ease, border-color .15s ease, background .15s ease; }
+.pickbtn:hover { transform: translateY(-2px); border-color: var(--navy); }
+.pickbtn .pk-t { display: block; font: 800 26px/1.15 var(--display); }
+.pickbtn .pk-d { display: block; margin-top: 6px; color: var(--muted); font-size: 15.5px; }
+.pickbtn[aria-selected="true"] { background: var(--navy); color: #fff; border-color: var(--navy); }
+.pickbtn[aria-selected="true"] .pk-d { color: #d6deec; }
+.pickpanel[hidden] { display: none; }
+.pk-note { margin-top: 18px; font-size: 14.5px; color: var(--muted); }
+@media (max-width: 560px) { .pick { grid-template-columns: 1fr; } .pickbtn .pk-t { font-size: 22px; } }
 </style>
 </head>
 <body>
@@ -302,9 +333,9 @@ footer p { max-width: 46em; }
   <div class="wrap">
     <a class="logo" href="#top">Espiron<span>Future</span></a>
     <nav class="nav-links" aria-label="Main">
+      <a href="#guides">Guides</a>
       <a href="#how">How it works</a>
       <a href="#paths">Career paths</a>
-      <a href="#guides">Guides</a>
       <a href="#roadmap">Free roadmap</a>
       <a href="#partners">For universities</a>
       <a href="#contact">Contact</a>
@@ -321,9 +352,10 @@ footer p { max-width: 46em; }
         <h1 id="h1">Pick your course <span class="mark">before</span> the course picks you.</h1>
         <p class="lead">Espiron Future helps students choose a stream, a course and a college that fit their marks, their interests and where the job market is heading. Talk to a counsellor first. Decide after.</p>
         <div class="hero-actions">
-          <a class="btn btn-saffron" href="#book">Book free counselling</a>
-          <a class="btn btn-ghost" href="#roadmap">Get the After 12th roadmap</a>
+          <a class="btn btn-saffron" href="#guides" data-pick="india">I want to study in India</a>
+          <a class="btn btn-ghost" href="#guides" data-pick="abroad">I want to study abroad</a>
         </div>
+        <p class="hero-sub">Not sure yet? <a href="#book">Book free counselling</a> or <a href="#roadmap">get the After 12th roadmap</a>.</p>
         <ul class="hero-facts">
           <li>Streams, courses and entrance exams explained</li>
           <li>College shortlists by fees and eligibility</li>
@@ -380,6 +412,14 @@ footer p { max-width: 46em; }
                 <span class="err">Choose a stream.</span>
               </div>
             </div>
+            <div class="field" id="f-interest">
+              <label for="interest">I am interested in</label>
+              <select id="interest" name="interest">
+                <option>Not sure yet</option>
+                <option>Study in India</option>
+                <option>Study abroad</option>
+              </select>
+            </div>
             <div class="field" id="f-phone">
               <label for="phone">Phone number</label>
               <input id="phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="10-digit mobile number" maxlength="14">
@@ -414,6 +454,49 @@ footer p { max-width: 46em; }
     </div>
   </section>
 
+
+  <section class="guides" id="guides" aria-labelledby="gd-h">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Start here</span>
+        <h2 id="gd-h">What are you looking for?</h2>
+        <p>Pick one and we will show the free guides that fit. Written in plain language for students and parents.</p>
+      </div>
+      <div class="pick" role="tablist" aria-label="Choose your direction">
+        <button class="pickbtn" role="tab" id="pk-india" aria-controls="pp-india" aria-selected="true" type="button">
+          <span class="pk-t">Study in India</span>
+          <span class="pk-d">Courses, entrance exams and colleges after Class 10 and 12.</span>
+        </button>
+        <button class="pickbtn" role="tab" id="pk-abroad" aria-controls="pp-abroad" aria-selected="false" type="button">
+          <span class="pk-t">Study abroad</span>
+          <span class="pk-d">Tests, costs, countries and what to check before you apply.</span>
+        </button>
+      </div>
+      <div class="pickpanel" role="tabpanel" id="pp-india" aria-labelledby="pk-india">
+        <div class="ggrid">
+        <a class="ccard" href="courses-after-12th-science/"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e9a443" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6M10 3v6l-5 9a2 2 0 002 3h10a2 2 0 002-3l-5-9V3"/></svg></span><span class="lbl">After 12th Science</span><span class="val">Courses after 12th Science: PCM, PCB and exams</span><span class="hint">Engineering, medicine, architecture and science degrees.</span></a>
+        <a class="ccard" href="courses-after-12th-commerce/"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e9a443" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span><span class="lbl">After 12th Commerce</span><span class="val">Courses after 12th Commerce: CA, BBA, law and more</span><span class="hint">How each route is entered and how to choose.</span></a>
+        <a class="ccard" href="career-options-in-punjab/"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e9a443" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-5.2-7-11a7 7 0 0114 0c0 5.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span class="lbl">Punjab</span><span class="val">Career options in Punjab after 12th</span><span class="hint">Sectors, courses and colleges close to home.</span></a>
+        <a class="ccard" href="neet-counselling-in-punjab/"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e9a443" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span><span class="lbl">NEET</span><span class="val">NEET counselling in Punjab: MCC and BFUHS steps</span><span class="hint">Documents, rounds and mistakes to avoid.</span></a>
+        <a class="ccard" href="courses-after-12th-arts/"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e9a443" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h7a3 3 0 013 3v11a2 2 0 00-2-2H4zM20 5h-7"/></svg></span><span class="lbl">After 12th Arts</span><span class="val">Courses after 12th Arts: law, design, media and more</span><span class="hint">Exams and routes open to Arts students.</span></a>
+        <a class="ccard" href="data-science-and-ai-careers-after-12th/"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e9a443" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg></span><span class="lbl">Data and AI</span><span class="val">Data science and AI careers after 12th</span><span class="hint">Routes for every stream, skills and honest outcomes.</span></a>
+        </div>
+      </div>
+      <div class="pickpanel" role="tabpanel" id="pp-abroad" aria-labelledby="pk-abroad" hidden>
+        <div class="ggrid">
+        <a class="ccard" href="study-abroad-after-12th/"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e9a443" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg></span><span class="lbl">Abroad</span><span class="val">Study abroad after 12th: tests, costs, visa rules</span><span class="hint">A careful guide for students and parents.</span></a>
+          <a class="ccard" href="study-in-germany-after-12th/"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e9a443" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-5.2-7-11a7 7 0 0114 0c0 5.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span class="lbl">Germany</span><span class="val">Study in Germany after 12th: Studienkolleg, APS and costs</span><span class="hint">Low tuition, but most students need a foundation year first.</span></a>
+          <a class="ccard" href="study-in-uk-after-12th/"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e9a443" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-5.2-7-11a7 7 0 0114 0c0 5.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span class="lbl">United Kingdom</span><span class="val">Study in the UK after 12th: UCAS, costs and visa rules</span><span class="hint">Main UCAS deadline for 2027 entry is 13 January 2027.</span></a>
+          <a class="ccard" href="study-in-canada-after-12th/"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e9a443" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-5.2-7-11a7 7 0 0114 0c0 5.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span class="lbl">Canada</span><span class="val">Study in Canada after 12th: study permit, costs and PGWP</span><span class="hint">A permit cap and PAL or TAL letters now apply.</span></a>
+          <a class="ccard" href="study-in-australia-after-12th/"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e9a443" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-5.2-7-11a7 7 0 0114 0c0 5.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span class="lbl">Australia</span><span class="val">Study in Australia after 12th: routes, costs and visa rules</span><span class="hint">Direct, diploma and foundation routes explained.</span></a>
+          <a class="ccard" href="study-in-usa-after-12th/"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e9a443" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-5.2-7-11a7 7 0 0114 0c0 5.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span class="lbl">USA</span><span class="val">Study in the USA after 12th: admission, costs and visa rules</span><span class="hint">SAT policies, total cost and the 2026 stay rule.</span></a>
+          <a class="ccard" href="#book" data-interest="Study abroad"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e9a443" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 01-13.4 7.8L3 21l1.3-4.4A9 9 0 1121 12z"/></svg></span><span class="lbl">Counselling</span><span class="val">Talk to a counsellor about your plan</span><span class="hint">Share your class, budget and goal. We reply on WhatsApp.</span></a>
+        </div>
+        <p class="pk-note">We help you compare options and check facts. We do not promise visas or foreign admissions.</p>
+      </div>
+    </div>
+  </section>
+
   <section class="magnet" id="roadmap" aria-labelledby="mag-h">
     <div class="wrap">
       <div class="booklet tilt" aria-hidden="true">
@@ -425,10 +508,10 @@ footer p { max-width: 46em; }
         <span class="eyebrow" style="color:#b66a00">Free download</span>
         <h2 id="mag-h">The After 12th Career Roadmap</h2>
         <ul>
-          <li><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="11" fill="#0e1f3d"/><path d="M6 11.5l3.3 3.2L16 8" fill="none" stroke="#f39a1e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Courses to consider for Science, Commerce and Arts students</span></li>
-          <li><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="11" fill="#0e1f3d"/><path d="M6 11.5l3.3 3.2L16 8" fill="none" stroke="#f39a1e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Which entrance exams matter for which course</span></li>
-          <li><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="11" fill="#0e1f3d"/><path d="M6 11.5l3.3 3.2L16 8" fill="none" stroke="#f39a1e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Courses linked to growing fields such as AI, data and healthcare</span></li>
-          <li><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="11" fill="#0e1f3d"/><path d="M6 11.5l3.3 3.2L16 8" fill="none" stroke="#f39a1e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>A checklist for comparing colleges before you pay a fee</span></li>
+          <li><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="11" fill="#2b4166"/><path d="M6 11.5l3.3 3.2L16 8" fill="none" stroke="#e9a443" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Courses to consider for Science, Commerce and Arts students</span></li>
+          <li><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="11" fill="#2b4166"/><path d="M6 11.5l3.3 3.2L16 8" fill="none" stroke="#e9a443" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Which entrance exams matter for which course</span></li>
+          <li><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="11" fill="#2b4166"/><path d="M6 11.5l3.3 3.2L16 8" fill="none" stroke="#e9a443" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Courses linked to growing fields such as AI, data and healthcare</span></li>
+          <li><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="11" fill="#2b4166"/><path d="M6 11.5l3.3 3.2L16 8" fill="none" stroke="#e9a443" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>A checklist for comparing colleges before you pay a fee</span></li>
         </ul>
         <a class="btn btn-navy" href="#book" id="roadmapCta">Get the roadmap with my counselling call</a>
       </div>
@@ -469,7 +552,7 @@ footer p { max-width: 46em; }
         <div>
           <h3>Results and direction</h3>
           <p class="lead2">Board results are out. Your first job is to narrow a wide field into two or three course families that fit your marks and your interests.</p>
-          <ul><li><svg width="20" height="20" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="11" fill="#0e1f3d"/><path d="M6 11.5l3.3 3.2L16 8" fill="none" stroke="#f39a1e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>List the courses open to your stream and your marks</span></li><li><svg width="20" height="20" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="11" fill="#0e1f3d"/><path d="M6 11.5l3.3 3.2L16 8" fill="none" stroke="#f39a1e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Match them with what you enjoy and what is growing</span></li><li><svg width="20" height="20" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="11" fill="#0e1f3d"/><path d="M6 11.5l3.3 3.2L16 8" fill="none" stroke="#f39a1e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Talk it through with your family before you register for anything</span></li></ul>
+          <ul><li><svg width="20" height="20" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="11" fill="#2b4166"/><path d="M6 11.5l3.3 3.2L16 8" fill="none" stroke="#e9a443" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>List the courses open to your stream and your marks</span></li><li><svg width="20" height="20" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="11" fill="#2b4166"/><path d="M6 11.5l3.3 3.2L16 8" fill="none" stroke="#e9a443" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Match them with what you enjoy and what is growing</span></li><li><svg width="20" height="20" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="11" fill="#2b4166"/><path d="M6 11.5l3.3 3.2L16 8" fill="none" stroke="#e9a443" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Talk it through with your family before you register for anything</span></li></ul>
         </div>
         <div class="sidebox">
           <div class="note-box note-decide"><b>The big decision</b>Which two or three course families deserve my effort?</div>
@@ -481,7 +564,7 @@ footer p { max-width: 46em; }
         <div>
           <h3>Entrance exams</h3>
           <p class="lead2">Most good courses open through an exam. Registration windows are short, and some close before results are out.</p>
-          <ul><li><svg width="20" height="20" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="11" fill="#0e1f3d"/><path d="M6 11.5l3.3 3.2L16 8" fill="none" stroke="#f39a1e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Find the exams your target courses accept: JEE Main, NEET UG, CUET UG, CLAT, NID DAT and others</span></li><li><svg width="20" height="20" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="11" fill="#0e1f3d"/><path d="M6 11.5l3.3 3.2L16 8" fill="none" stroke="#f39a1e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Note registration, admit card and exam dates in one calendar</span></li><li><svg width="20" height="20" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="11" fill="#0e1f3d"/><path d="M6 11.5l3.3 3.2L16 8" fill="none" stroke="#f39a1e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Keep a backup exam for a second route</span></li></ul>
+          <ul><li><svg width="20" height="20" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="11" fill="#2b4166"/><path d="M6 11.5l3.3 3.2L16 8" fill="none" stroke="#e9a443" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Find the exams your target courses accept: JEE Main, NEET UG, CUET UG, CLAT, NID DAT and others</span></li><li><svg width="20" height="20" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="11" fill="#2b4166"/><path d="M6 11.5l3.3 3.2L16 8" fill="none" stroke="#e9a443" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Note registration, admit card and exam dates in one calendar</span></li><li><svg width="20" height="20" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="11" fill="#2b4166"/><path d="M6 11.5l3.3 3.2L16 8" fill="none" stroke="#e9a443" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Keep a backup exam for a second route</span></li></ul>
         </div>
         <div class="sidebox">
           <div class="note-box note-decide"><b>The big decision</b>Which exams do I write, and which can I skip?</div>
@@ -493,7 +576,7 @@ footer p { max-width: 46em; }
         <div>
           <h3>Counselling and applications</h3>
           <p class="lead2">Seats are allocated in rounds. The order in which you list courses and colleges changes the seat you get.</p>
-          <ul><li><svg width="20" height="20" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="11" fill="#0e1f3d"/><path d="M6 11.5l3.3 3.2L16 8" fill="none" stroke="#f39a1e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Gather documents early: marksheets, category and domicile papers, photos</span></li><li><svg width="20" height="20" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="11" fill="#0e1f3d"/><path d="M6 11.5l3.3 3.2L16 8" fill="none" stroke="#f39a1e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Learn how each counselling round works before it opens</span></li><li><svg width="20" height="20" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="11" fill="#0e1f3d"/><path d="M6 11.5l3.3 3.2L16 8" fill="none" stroke="#f39a1e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Rank your choices by course first, then college</span></li></ul>
+          <ul><li><svg width="20" height="20" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="11" fill="#2b4166"/><path d="M6 11.5l3.3 3.2L16 8" fill="none" stroke="#e9a443" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Gather documents early: marksheets, category and domicile papers, photos</span></li><li><svg width="20" height="20" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="11" fill="#2b4166"/><path d="M6 11.5l3.3 3.2L16 8" fill="none" stroke="#e9a443" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Learn how each counselling round works before it opens</span></li><li><svg width="20" height="20" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="11" fill="#2b4166"/><path d="M6 11.5l3.3 3.2L16 8" fill="none" stroke="#e9a443" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Rank your choices by course first, then college</span></li></ul>
         </div>
         <div class="sidebox">
           <div class="note-box note-decide"><b>The big decision</b>In what order should I fill my choices?</div>
@@ -505,7 +588,7 @@ footer p { max-width: 46em; }
         <div>
           <h3>College and fees</h3>
           <p class="lead2">A seat is not the same as a good fit. Compare colleges on facts before you pay.</p>
-          <ul><li><svg width="20" height="20" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="11" fill="#0e1f3d"/><path d="M6 11.5l3.3 3.2L16 8" fill="none" stroke="#f39a1e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Check approvals and recognition of the college and course</span></li><li><svg width="20" height="20" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="11" fill="#0e1f3d"/><path d="M6 11.5l3.3 3.2L16 8" fill="none" stroke="#f39a1e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Compare total fees for the full course, not just the first year</span></li><li><svg width="20" height="20" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="11" fill="#0e1f3d"/><path d="M6 11.5l3.3 3.2L16 8" fill="none" stroke="#f39a1e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Ask for real placement and alumni details, not brochure claims</span></li></ul>
+          <ul><li><svg width="20" height="20" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="11" fill="#2b4166"/><path d="M6 11.5l3.3 3.2L16 8" fill="none" stroke="#e9a443" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Check approvals and recognition of the college and course</span></li><li><svg width="20" height="20" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="11" fill="#2b4166"/><path d="M6 11.5l3.3 3.2L16 8" fill="none" stroke="#e9a443" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Compare total fees for the full course, not just the first year</span></li><li><svg width="20" height="20" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="11" fill="#2b4166"/><path d="M6 11.5l3.3 3.2L16 8" fill="none" stroke="#e9a443" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Ask for real placement and alumni details, not brochure claims</span></li></ul>
         </div>
         <div class="sidebox">
           <div class="note-box note-decide"><b>The big decision</b>Is this college worth its total cost to my family?</div>
@@ -517,7 +600,7 @@ footer p { max-width: 46em; }
         <div>
           <h3>Your first year</h3>
           <p class="lead2">The first year sets the habits that decide your results and your skills for the next three or four years.</p>
-          <ul><li><svg width="20" height="20" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="11" fill="#0e1f3d"/><path d="M6 11.5l3.3 3.2L16 8" fill="none" stroke="#f39a1e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Pick one add-on skill to build alongside your degree</span></li><li><svg width="20" height="20" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="11" fill="#0e1f3d"/><path d="M6 11.5l3.3 3.2L16 8" fill="none" stroke="#f39a1e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Look for internships and projects from the first year</span></li><li><svg width="20" height="20" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="11" fill="#0e1f3d"/><path d="M6 11.5l3.3 3.2L16 8" fill="none" stroke="#f39a1e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Meet seniors and faculty in your field early</span></li></ul>
+          <ul><li><svg width="20" height="20" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="11" fill="#2b4166"/><path d="M6 11.5l3.3 3.2L16 8" fill="none" stroke="#e9a443" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Pick one add-on skill to build alongside your degree</span></li><li><svg width="20" height="20" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="11" fill="#2b4166"/><path d="M6 11.5l3.3 3.2L16 8" fill="none" stroke="#e9a443" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Look for internships and projects from the first year</span></li><li><svg width="20" height="20" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="11" fill="#2b4166"/><path d="M6 11.5l3.3 3.2L16 8" fill="none" stroke="#e9a443" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Meet seniors and faculty in your field early</span></li></ul>
         </div>
         <div class="sidebox">
           <div class="note-box note-decide"><b>The big decision</b>Which skills will make me stand out in my course?</div>
@@ -612,24 +695,6 @@ footer p { max-width: 46em; }
   </section>
 
 
-  <section class="guides" id="guides" aria-labelledby="gd-h">
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <span class="eyebrow">Free guides</span>
-        <h2 id="gd-h">Read before you decide.</h2>
-        <p>Plain-language guides to courses, exams and colleges, written for students and parents in Punjab.</p>
-      </div>
-      <div class="ggrid">
-        <a class="ccard" href="courses-after-12th-science/"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f39a1e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6M10 3v6l-5 9a2 2 0 002 3h10a2 2 0 002-3l-5-9V3"/></svg></span><span class="lbl">After 12th Science</span><span class="val">Courses after 12th Science: PCM, PCB and exams</span><span class="hint">Engineering, medicine, architecture and science degrees.</span></a>
-        <a class="ccard" href="courses-after-12th-commerce/"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f39a1e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span><span class="lbl">After 12th Commerce</span><span class="val">Courses after 12th Commerce: CA, BBA, law and more</span><span class="hint">How each route is entered and how to choose.</span></a>
-        <a class="ccard" href="career-options-in-punjab/"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f39a1e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-5.2-7-11a7 7 0 0114 0c0 5.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span class="lbl">Punjab</span><span class="val">Career options in Punjab after 12th</span><span class="hint">Sectors, courses and colleges close to home.</span></a>
-        <a class="ccard" href="neet-counselling-in-punjab/"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f39a1e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span><span class="lbl">NEET</span><span class="val">NEET counselling in Punjab: MCC and BFUHS steps</span><span class="hint">Documents, rounds and mistakes to avoid.</span></a>
-        <a class="ccard" href="courses-after-12th-arts/"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f39a1e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h7a3 3 0 013 3v11a2 2 0 00-2-2H4zM20 5h-7"/></svg></span><span class="lbl">After 12th Arts</span><span class="val">Courses after 12th Arts: law, design, media and more</span><span class="hint">Exams and routes open to Arts students.</span></a>
-        <a class="ccard" href="study-abroad-after-12th/"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f39a1e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg></span><span class="lbl">Abroad</span><span class="val">Study abroad after 12th: tests, costs, visa rules</span><span class="hint">A careful guide for students and parents.</span></a>
-        <a class="ccard" href="data-science-and-ai-careers-after-12th/"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f39a1e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg></span><span class="lbl">Data and AI</span><span class="val">Data science and AI careers after 12th</span><span class="hint">Routes for every stream, skills and honest outcomes.</span></a>
-      </div>
-    </div>
-  </section>
 
   <section id="trust" aria-labelledby="trust-h">
     <div class="wrap">
@@ -657,15 +722,15 @@ footer p { max-width: 46em; }
         </div>
         <ul class="points">
           <li>
-            <span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f39a1e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M7 11v5c0 1.5 2.2 3 5 3s5-1.5 5-3v-5"/></svg></span>
+            <span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e9a443" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M7 11v5c0 1.5 2.2 3 5 3s5-1.5 5-3v-5"/></svg></span>
             <div><h3>School seminars</h3><p>Our counsellors visit schools to guide students in groups, then follow up one to one.</p></div>
           </li>
           <li>
-            <span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f39a1e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span>
+            <span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e9a443" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span>
             <div><h3>Advice tied to the market</h3><p>We look at which fields are growing before we suggest a course, not after.</p></div>
           </li>
           <li>
-            <span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f39a1e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.4-7-10a4 4 0 017-2.6A4 4 0 0119 11c0 5.6-7 10-7 10z"/></svg></span>
+            <span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e9a443" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.4-7-10a4 4 0 017-2.6A4 4 0 0119 11c0 5.6-7 10-7 10z"/></svg></span>
             <div><h3>Parents are part of it</h3><p>Families can join the call to talk about fees, location and expectations openly.</p></div>
           </li>
         </ul>
@@ -696,10 +761,10 @@ footer p { max-width: 46em; }
           <p class="fine" id="partnerNote" style="color:#9fb0d3"></p>
         </div>
         <ul>
-          <li><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="11" fill="#f39a1e"/><path d="M6 11.5l3.3 3.2L16 8" fill="none" stroke="#0e1f3d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Counselling-first enquiries, not cold lists</span></li>
-          <li><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="11" fill="#f39a1e"/><path d="M6 11.5l3.3 3.2L16 8" fill="none" stroke="#0e1f3d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>School seminars that reach students early</span></li>
-          <li><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="11" fill="#f39a1e"/><path d="M6 11.5l3.3 3.2L16 8" fill="none" stroke="#0e1f3d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Course and stream details captured at enquiry</span></li>
-          <li><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="11" fill="#f39a1e"/><path d="M6 11.5l3.3 3.2L16 8" fill="none" stroke="#0e1f3d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Clear reporting on every lead we send</span></li>
+          <li><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="11" fill="#e9a443"/><path d="M6 11.5l3.3 3.2L16 8" fill="none" stroke="#2b4166" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Counselling-first enquiries, not cold lists</span></li>
+          <li><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="11" fill="#e9a443"/><path d="M6 11.5l3.3 3.2L16 8" fill="none" stroke="#2b4166" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>School seminars that reach students early</span></li>
+          <li><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="11" fill="#e9a443"/><path d="M6 11.5l3.3 3.2L16 8" fill="none" stroke="#2b4166" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Course and stream details captured at enquiry</span></li>
+          <li><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="11" fill="#e9a443"/><path d="M6 11.5l3.3 3.2L16 8" fill="none" stroke="#2b4166" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Clear reporting on every lead we send</span></li>
         </ul>
       </div>
     </div>
@@ -713,10 +778,10 @@ footer p { max-width: 46em; }
         <p>Message us on WhatsApp for the fastest reply, or call and write to us.</p>
       </div>
       <div class="cgrid">
-        <a class="ccard" data-wa href="#" target="_blank" rel="noopener"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f39a1e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 01-13.4 7.8L3 21l1.3-4.4A9 9 0 1121 12z"/></svg></span><span class="lbl">WhatsApp</span><span class="val" data-phone></span><span class="hint">Send a message and we reply.</span></a>
-        <a class="ccard" data-tel href="#"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f39a1e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg></span><span class="lbl">Call</span><span class="val" data-phone></span><span class="hint">Talk to us directly.</span></a>
-        <a class="ccard" data-mail href="#"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f39a1e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><span class="lbl">Email</span><span class="val" data-mailtext></span><span class="hint">For questions and partnerships.</span></a>
-        <a class="ccard" href="https://www.instagram.com/espironfutureofficial" target="_blank" rel="noopener"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f39a1e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></span><span class="lbl">Instagram</span><span class="val">@espironfutureofficial</span><span class="hint">Daily career and course posts.</span></a>
+        <a class="ccard" data-wa href="#" target="_blank" rel="noopener"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e9a443" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 01-13.4 7.8L3 21l1.3-4.4A9 9 0 1121 12z"/></svg></span><span class="lbl">WhatsApp</span><span class="val" data-phone></span><span class="hint">Send a message and we reply.</span></a>
+        <a class="ccard" data-tel href="#"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e9a443" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg></span><span class="lbl">Call</span><span class="val" data-phone></span><span class="hint">Talk to us directly.</span></a>
+        <a class="ccard" data-mail href="#"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e9a443" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><span class="lbl">Email</span><span class="val" data-mailtext></span><span class="hint">For questions and partnerships.</span></a>
+        <a class="ccard" href="https://www.instagram.com/espironfutureofficial" target="_blank" rel="noopener"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e9a443" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></span><span class="lbl">Instagram</span><span class="val">@espironfutureofficial</span><span class="hint">Daily career and course posts.</span></a>
       </div>
       <p class="fine" style="margin-top:18px">Based in Amritsar, Punjab.</p>
     </div>
@@ -794,6 +859,24 @@ var CONFIG = {
     });
   });
 
+  /* India / abroad chooser */
+  function pick(which) {
+    var abroad = which === "abroad";
+    $("pk-india").setAttribute("aria-selected", String(!abroad));
+    $("pk-abroad").setAttribute("aria-selected", String(abroad));
+    $("pp-india").hidden = abroad;
+    $("pp-abroad").hidden = !abroad;
+    $("interest").value = abroad ? "Study abroad" : "Study in India";
+  }
+  $("pk-india").addEventListener("click", function () { pick("india"); });
+  $("pk-abroad").addEventListener("click", function () { pick("abroad"); });
+  document.querySelectorAll("[data-pick]").forEach(function (a) {
+    a.addEventListener("click", function () { pick(a.getAttribute("data-pick")); });
+  });
+  document.querySelectorAll("[data-interest]").forEach(function (a) {
+    a.addEventListener("click", function () { $("interest").value = a.getAttribute("data-interest"); });
+  });
+
   /* Lead form */
   var form = $("leadForm"), msg = "";
   function setBad(id, bad) { $(id).classList.toggle("bad", bad); }
@@ -815,11 +898,11 @@ var CONFIG = {
     }
     var roadmap = $("wantRoadmap").checked;
     msg = "Hi Espiron Future, I would like free career counselling.\n" +
-          "Name: " + name + "\nClass: " + cls + "\nStream: " + stream + "\nPhone: " + phone +
+          "Name: " + name + "\nClass: " + cls + "\nStream: " + stream + "\nInterested in: " + $("interest").value + "\nPhone: " + phone +
           (roadmap ? "\nPlease also send the After 12th Career Roadmap." : "");
     var s = $("summary");
     s.innerHTML = "";
-    [["Name", name], ["Class", cls], ["Stream", stream], ["Phone", phone]].forEach(function (r) {
+    [["Name", name], ["Class", cls], ["Stream", stream], ["Interest", $("interest").value], ["Phone", phone]].forEach(function (r) {
       var d = document.createElement("div");
       var b = document.createElement("b"); b.textContent = r[0];
       d.appendChild(b); d.appendChild(document.createTextNode(r[1]));
@@ -834,7 +917,7 @@ var CONFIG = {
       wa.style.display = "none";
       $("previewNote").hidden = false;
     }
-    track("generate_lead", "Lead", { lead_class: cls, lead_stream: stream });
+    track("generate_lead", "Lead", { lead_class: cls, lead_stream: stream, lead_interest: $("interest").value });
     $("formWrap").classList.add("hide");
     $("done").classList.add("show");
   });
