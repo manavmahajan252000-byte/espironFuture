@@ -348,6 +348,20 @@ footer p { max-width: 46em; }
 .card { border: 1px solid var(--line); box-shadow: 0 18px 40px -26px rgba(43,65,102,.35); background: #fff; }
 .sec-head h2, .magnet h2, .partner h2, .stage-panel h3, .step h3 { font-weight: 700; }
 .pickbtn .pk-t { font-weight: 700; }
+
+/* ---------- Coming soon ---------- */
+.soon { background: var(--paper); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.soon-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.soon-card { position: relative; background: #fff; border: 1.5px dashed #cfc7b4; border-radius: 18px; padding: 26px 22px 22px; display: grid; gap: 10px; align-content: start; }
+.soon-card h3 { font-size: 21px; font-weight: 700; padding-right: 54px; }
+.soon-pill { position: absolute; top: 18px; right: 18px; font: 700 11.5px var(--body); letter-spacing: .12em; text-transform: uppercase; color: var(--navy); background: rgba(233,164,67,.28); border-radius: 999px; padding: 5px 10px; }
+.soon-card .blur { margin: 0; color: var(--muted); filter: blur(5px); user-select: none; transition: filter .35s ease; }
+.soon-card:hover .blur { filter: blur(3px); }
+.soon-lock { display: inline-flex; align-items: center; gap: 7px; font: 700 13.5px var(--body); color: var(--navy); }
+.soon-cta { margin-top: 30px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; }
+.soon-cta p { margin: 0; max-width: 34em; color: var(--muted); font-size: 17px; }
+@media (max-width: 920px) { .soon-grid { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) { .soon-card .blur { transition: none; } }
 </style>
 </head>
 <body>
@@ -360,6 +374,7 @@ footer p { max-width: 46em; }
       <a href="#how">How it works</a>
       <a href="#paths">Career paths</a>
       <a href="#roadmap">Free roadmap</a>
+      <a href="#soon">Coming soon</a>
       <a href="#partners">For universities</a>
       <a href="#contact">Contact</a>
       <a class="btn btn-saffron" href="#book">Book free counselling</a>
@@ -719,6 +734,41 @@ footer p { max-width: 46em; }
 
 
 
+
+  <section class="soon" id="soon" aria-labelledby="soon-h">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Coming soon</span>
+        <h2 id="soon-h">Already working? Your next move is being mapped.</h2>
+        <p>Espiron Future is building something for professionals who want to grow, switch or get ahead. We are not ready to show it all yet.</p>
+      </div>
+      <div class="soon-grid">
+        <div class="soon-card">
+          <span class="soon-pill">Soon</span>
+          <h3>Which skill is worth learning next?</h3>
+          <p class="blur" aria-hidden="true">A short skill map built around your role, your field and where hiring is heading.</p>
+          <span class="soon-lock"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg> Unlocks soon</span>
+        </div>
+        <div class="soon-card">
+          <span class="soon-pill">Soon</span>
+          <h3>Thinking of switching fields?</h3>
+          <p class="blur" aria-hidden="true">A clear route from where you are now to the role you want, with the gaps shown.</p>
+          <span class="soon-lock"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg> Unlocks soon</span>
+        </div>
+        <div class="soon-card">
+          <span class="soon-pill">Soon</span>
+          <h3>Stuck at the same level?</h3>
+          <p class="blur" aria-hidden="true">Practical steps to move up, from the courses worth taking to the people worth meeting.</p>
+          <span class="soon-lock"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg> Unlocks soon</span>
+        </div>
+      </div>
+      <div class="soon-cta">
+        <p>Be the first to know. Send one message and we will tell you the day it opens.</p>
+        <a class="btn btn-navy" data-notify href="#" target="_blank" rel="noopener">Notify me on WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
   <section id="trust" aria-labelledby="trust-h">
     <div class="wrap">
       <div class="sec-head reveal">
@@ -1061,6 +1111,8 @@ var CONFIG = {
   var pretty = "+" + d.slice(0, d.length - 10) + " " + local.slice(0, 5) + " " + local.slice(5);
   var hi = encodeURIComponent("Hi Espiron Future, I would like free career counselling.");
   document.querySelectorAll("[data-wa]").forEach(function (a) { a.href = "https://wa.me/" + d + "?text=" + hi; });
+  var notify = encodeURIComponent("Hi Espiron Future, please notify me when the career growth programme for working professionals opens.");
+  document.querySelectorAll("[data-notify]").forEach(function (a) { a.href = "https://wa.me/" + d + "?text=" + notify; });
   document.querySelectorAll("[data-tel]").forEach(function (a) { a.href = "tel:+" + d; });
   document.querySelectorAll("[data-phone]").forEach(function (s) { s.textContent = pretty; });
   document.querySelectorAll("[data-mail]").forEach(function (a) { a.href = "mailto:" + CONFIG.partnerEmail; });
@@ -1088,6 +1140,7 @@ function track(gaEvent, metaEvent, params) {
     var a = e.target.closest ? e.target.closest("a, button") : null;
     if (!a) return;
     if (a.id === "waBtn" || a.hasAttribute("data-wa")) track("click_whatsapp", "Contact", { location: a.id === "waBtn" ? "form" : "contact_section" });
+    else if (a.hasAttribute("data-notify")) track("notify_me", null, { topic: "professional_growth" });
     else if (a.hasAttribute("data-tel")) track("click_call", "Contact", {});
   });
 })();
