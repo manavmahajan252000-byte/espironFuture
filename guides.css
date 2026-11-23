@@ -101,3 +101,9 @@ details p { color: var(--muted); }
   td:first-child { font: 700 18px/1.25 var(--display); padding-top: 12px; }
   td:not(:first-child)::before { content: attr(data-label); display: block; font: 700 11.5px var(--body); letter-spacing: .1em; text-transform: uppercase; color: #b66a00; margin-bottom: 2px; }
 }
+
+/* lighter headings and light top bar */
+.article h1 { font-weight: 700; }
+.gnav { background: var(--paper); color: var(--ink); border-bottom: 1px solid var(--line); }
+.gnav .logo { color: var(--navy); }
+.gnav nav a:not(.btn) { color: var(--navy); }
