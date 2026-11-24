@@ -382,6 +382,54 @@ summary { font-weight: 600; font-size: 17.5px; }
 .step .pin { font-weight: 700; }
 .btn { font-weight: 600; }
 @media (max-width: 560px) { .pickbtn .pk-t { font-size: 20px; } .hero h1 { font-size: 29px; } }
+
+/* Featured strip */
+.feat { padding: 52px 0 8px; }
+.feat-head { display: flex; justify-content: space-between; align-items: end; gap: 12px; flex-wrap: wrap; margin-bottom: 18px; }
+.feat-head h2 { font-size: clamp(22px, 2.6vw, 28px); font-weight: 600; margin: 4px 0 0; }
+.feat-grid { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(270px, 1fr); gap: 16px; overflow-x: auto; scroll-snap-type: x proximity; padding-bottom: 8px; }
+.feat-card { scroll-snap-align: start; background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 22px; display: grid; gap: 10px; align-content: start; }
+.feat-card h3 { font-size: 19px; font-weight: 600; margin: 0; }
+.feat-card p { margin: 0; color: var(--muted); font-size: 15.5px; }
+.feat-tag { width: max-content; font: 700 11.5px var(--body); letter-spacing: .1em; text-transform: uppercase; color: var(--navy); background: rgba(233,164,67,.24); border-radius: 999px; padding: 4px 10px; }
+.feat-tag.partner { background: #e8edf3; }
+.feat-meta { font-size: 13px; color: var(--muted); }
+.feat-link { font-weight: 600; color: var(--navy); text-decoration: none; border-bottom: 1.5px solid var(--saffron); width: max-content; }
+.feat-note { margin: 4px 0 0; font-size: 13.5px; color: var(--muted); }
+@media (min-width: 960px) { .feat-grid { grid-auto-flow: row; grid-template-columns: repeat(3, 1fr); grid-auto-columns: auto; overflow: visible; } }
+
+/* Running ticker */
+.tick { background: var(--paper); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 6px 0; }
+.tick[hidden] { display: none; }
+.tick-row { display: flex; align-items: center; gap: 14px; max-width: 1240px; margin: 0 auto; padding: 5px 22px; }
+.tick-label { flex: none; font: 700 11.5px var(--body); letter-spacing: .1em; text-transform: uppercase; color: var(--navy); background: rgba(233,164,67,.24); border-radius: 999px; padding: 5px 11px; white-space: nowrap; }
+.tick-view { flex: 1; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent); mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent); }
+.tick-track { display: flex; width: max-content; animation: tick-left 150s linear infinite; }
+.tick-row.rev .tick-track { animation-name: tick-right; animation-duration: 80s; }
+.tick:hover .tick-track, .tick:focus-within .tick-track { animation-play-state: paused; }
+.tick-item { flex: none; padding: 0 20px; font-size: 15px; color: var(--ink); white-space: nowrap; position: relative; }
+.tick-item::after { content: ""; position: absolute; right: -2px; top: 50%; width: 5px; height: 5px; margin-top: -2px; border-radius: 50%; background: var(--saffron); }
+a.tick-item { color: var(--navy); text-decoration: none; font-weight: 600; }
+.tick-c { font-weight: 700; text-transform: uppercase; letter-spacing: .06em; font-size: 13.5px; }
+.tick-view { transition: none; }
+a.tick-item:hover { text-decoration: underline; }
+@keyframes tick-left { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@keyframes tick-right { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+@media (max-width: 640px) { .tick-row { gap: 8px; padding: 4px 12px; } .tick-label { font-size: 10.5px; padding: 4px 8px; } .tick-item { font-size: 14px; padding: 0 14px; } }
+@media (prefers-reduced-motion: reduce) { .tick-track, .tick-row.rev .tick-track { animation: none; } .tick-view { overflow-x: auto; } }
+
+/* Top universities by country */
+.uni { padding: 52px 0 8px; }
+.uni-tabs { display: flex; gap: 8px; flex-wrap: wrap; margin: 6px 0 16px; }
+.uni-tab { font: 600 15px var(--body); color: var(--navy); background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 8px 16px; cursor: pointer; }
+.uni-tab[aria-selected="true"] { background: var(--navy); color: #fff; border-color: var(--navy); }
+.uni-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.uni-list li { display: flex; align-items: center; gap: 14px; background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 12px 16px; }
+.uni-rank { flex: none; min-width: 58px; text-align: center; font: 600 14px var(--body); color: var(--navy); background: rgba(233,164,67,.24); border-radius: 999px; padding: 5px 10px; }
+.uni-name { font-weight: 600; line-height: 1.3; }
+.uni-city { display: block; font-size: 14px; color: var(--muted); font-weight: 400; }
+.uni-foot { margin: 14px 0 0; font-size: 13.5px; color: var(--muted); max-width: 52em; }
+.uni-foot a { color: var(--navy); font-weight: 600; }
 </style>
 </head>
 <body>
@@ -513,6 +561,11 @@ summary { font-weight: 600; font-size: 17.5px; }
   </section>
 
 
+  <div class="tick" id="ticker" aria-label="Study destinations and institutions" hidden>
+    <div class="tick-row"><span class="tick-label" title="QS World University Rankings 2027, world rank">Abroad: top 5 each</span><div class="tick-view"><div class="tick-track" id="tick-a"></div></div></div>
+    <div class="tick-row rev"><span class="tick-label">In Punjab</span><div class="tick-view"><div class="tick-track" id="tick-p"></div></div></div>
+  </div>
+
   <section class="guides" id="guides" aria-labelledby="gd-h">
     <div class="wrap">
       <div class="sec-head reveal">
@@ -552,6 +605,29 @@ summary { font-weight: 600; font-size: 17.5px; }
         </div>
         <p class="pk-note">We help you compare options and check facts. We do not promise visas or foreign admissions.</p>
       </div>
+    </div>
+  </section>
+
+  <section class="feat" id="featured" aria-labelledby="feat-h" hidden>
+    <div class="wrap">
+      <div class="feat-head">
+        <div>
+          <span class="eyebrow">Featured this week</span>
+          <h2 id="feat-h">New and worth a look</h2>
+        </div>
+      </div>
+      <div class="feat-grid" id="feat-grid"></div>
+      <p class="feat-note">Information only. Always confirm fees, dates and entry rules on the official university page. Items marked Partner are promoted by the university.</p>
+    </div>
+  </section>
+
+  <section class="uni" id="universities" aria-labelledby="uni-h" hidden>
+    <div class="wrap">
+      <span class="eyebrow">Study abroad</span>
+      <h2 id="uni-h" style="font-size:clamp(22px,2.6vw,28px);font-weight:600;margin:4px 0 0">Top 5 universities in each country</h2>
+      <div class="uni-tabs" role="tablist" aria-label="Choose a country" id="uni-tabs"></div>
+      <ol class="uni-list" id="uni-list"></ol>
+      <p class="uni-foot" id="uni-foot"></p>
     </div>
   </section>
 
@@ -919,6 +995,76 @@ summary { font-weight: 600; font-size: 17.5px; }
   <button class="btn btn-navy close" type="button" id="pvClose">Close</button>
 </dialog>
 
+<script src="featured.js"></script>
+<script>
+(function(){
+  var sec=document.getElementById("featured"),grid=document.getElementById("feat-grid");
+  if(!sec||!grid||typeof FEATURED==="undefined")return;
+  var today=new Date().toISOString().slice(0,10),n=0;
+  function esc(t){var d=document.createElement("div");d.textContent=t==null?"":String(t);return d.innerHTML;}
+  FEATURED.forEach(function(f){
+    if(!f||!f.title||!f.url)return;
+    if(f.expires&&f.expires<today)return;
+    var ext=/^https?:/.test(f.url),lab=f.label||"Info";
+    var a=document.createElement("article");a.className="feat-card";
+    a.innerHTML='<span class="feat-tag'+(lab==="Partner"?' partner':'')+'">'+esc(lab)+'</span><h3>'+esc(f.title)+'</h3>'+(f.line?'<p>'+esc(f.line)+'</p>':'')+(f.checked?'<span class="feat-meta">Checked '+esc(f.checked)+'</span>':'')+'<a class="feat-link" href="'+esc(f.url)+'"'+(ext?' target="_blank" rel="noopener sponsored"':'')+'>'+esc(f.cta||"Learn more")+'</a>';
+    a.querySelector("a").addEventListener("click",function(){if(typeof gtag==="function")gtag("event","featured_click",{item:f.title,label:lab});});
+    grid.appendChild(a);n++;
+  });
+  if(n)sec.hidden=false;
+})();
+</script>
+<script src="unis.js"></script>
+<script src="ticker.js"></script>
+<script>
+(function(){
+  var box=document.getElementById("ticker");
+  if(!box||typeof TICKER_ABROAD==="undefined"||typeof TICKER_PUNJAB==="undefined")return;
+  function fill(id,list){
+    var tr=document.getElementById(id);if(!tr||!list||!list.length)return false;
+    for(var k=0;k<2;k++){
+      list.forEach(function(it){
+        if(!it||!it.t)return;
+        var el=document.createElement(it.u?"a":"span");el.className="tick-item"+(it.k==="c"?" tick-c":"");el.textContent=it.t;
+        if(it.u){el.href=it.u;}
+        if(k===1){el.setAttribute("aria-hidden","true");if(it.u)el.tabIndex=-1;}
+        tr.appendChild(el);
+      });
+    }
+    return true;
+  }
+  var abroad=[],seen={};
+  if(typeof UNIS!=="undefined"){UNIS.forEach(function(c){
+    seen[c.country]=1;abroad.push({t:c.country,u:c.guide,k:"c"});
+    c.list.forEach(function(x){abroad.push({t:(x.s||x.n)+" #"+x.r});});
+  });}
+  TICKER_ABROAD.forEach(function(x){if(!seen[x.t])abroad.push(x);});
+  var a=fill("tick-a",abroad),b=fill("tick-p",TICKER_PUNJAB);
+  if(a||b)box.hidden=false;
+})();
+</script>
+<script>
+(function(){
+  var sec=document.getElementById("universities");
+  if(!sec||typeof UNIS==="undefined"||!UNIS.length)return;
+  var tabs=document.getElementById("uni-tabs"),list=document.getElementById("uni-list"),foot=document.getElementById("uni-foot");
+  function esc(t){var d=document.createElement("div");d.textContent=t==null?"":String(t);return d.innerHTML;}
+  function show(i){
+    var u=UNIS[i];
+    Array.prototype.forEach.call(tabs.children,function(b,k){b.setAttribute("aria-selected",k===i?"true":"false");});
+    list.innerHTML=u.list.map(function(x){return '<li><span class="uni-rank" title="World rank">#'+esc(x.r)+'</span><span class="uni-name">'+esc(x.n)+'<span class="uni-city">'+esc(x.c)+'</span></span></li>';}).join("");
+    foot.innerHTML='Rank shows each university\'s position in the world list: '+esc(typeof UNIS_SOURCE==="string"?UNIS_SOURCE:"")+'. A high rank does not mean a university suits your course, budget or profile, and it does not guarantee admission. Check fees, entry rules and dates on the official university page. <a href="'+esc(u.guide)+'">Read the '+esc(u.country)+' guide</a>.';
+    if(typeof gtag==="function"&&show.ready)gtag("event","uni_country_view",{country:u.country});
+    show.ready=true;
+  }
+  UNIS.forEach(function(u,i){
+    var b=document.createElement("button");b.type="button";b.className="uni-tab";b.setAttribute("role","tab");b.textContent=u.country;
+    b.addEventListener("click",function(){show(i);});
+    tabs.appendChild(b);
+  });
+  show(0);sec.hidden=false;
+})();
+</script>
 <script>
 /* Set these two before going live. */
 var CONFIG = {
