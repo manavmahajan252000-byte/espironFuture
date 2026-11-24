@@ -114,3 +114,10 @@ details p { color: var(--muted); }
 .article h3 { font-size: 18px; font-weight: 600; }
 .cta h2 { font-size: clamp(21px, 2.6vw, 26px); font-weight: 600; }
 .logo { font-weight: 700; font-size: 21px; }
+
+/* Logo mark */
+.logo { display: inline-flex; align-items: center; gap: 10px; }
+.lm { flex: none; width: 32px; height: 32px; }
+.lm-t { fill: #2b4166; } .lm-b { fill: #f6f3ec; } .lm-s { fill: #e9a443; }
+.gfoot .lm-t { fill: #f6f3ec; } .gfoot .lm-b { fill: #2b4166; }
+.logo .lw { color: inherit; } .logo .lw span { color: #e9a443; }

@@ -5,12 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Espiron Future</title>
 <meta name="description" content="Free career counselling for students after 10th and 12th. Pick the right stream, course and college with Espiron Future.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232b4166'/%3E%3Ctext x='32' y='46' font-size='40' font-weight='800' text-anchor='middle' fill='%23e9a443' font-family='Arial,sans-serif'%3EE%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Espiron Future | Free career counselling">
 <meta property="og:description" content="Pick the right stream, course and college after 10th and 12th. Book free counselling with Espiron Future in Amritsar.">
 <meta property="og:url" content="https://www.espironfuture.com/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"EducationalOrganization","name":"Espiron Future","url":"https://www.espironfuture.com/","email":"hello@espironfuture.com","telephone":"+918360363971","address":{"@type":"PostalAddress","addressLocality":"Amritsar","addressRegion":"Punjab","addressCountry":"IN"},"sameAs":["https://www.instagram.com/espironfutureofficial"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"EducationalOrganization","name":"Espiron Future","url":"https://www.espironfuture.com/","email":"hello@espironfuture.com","telephone":"+918360363971","address":{"@type":"PostalAddress","addressLocality":"Amritsar","addressRegion":"Punjab","addressCountry":"IN"},"logo":"https://www.espironfuture.com/logo-mark.svg","sameAs":["https://www.instagram.com/espironfutureofficial"]}</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZYJTKP8LN2"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-ZYJTKP8LN2");</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -418,13 +419,21 @@ a.tick-item:hover { text-decoration: underline; }
 @media (max-width: 640px) { .tick-row { gap: 8px; padding: 4px 12px; } .tick-label { font-size: 10.5px; padding: 4px 8px; } .tick-item { font-size: 14px; padding: 0 14px; } }
 @media (prefers-reduced-motion: reduce) { .tick-track, .tick-row.rev .tick-track { animation: none; } .tick-view { overflow-x: auto; } }
 
+
+/* Logo mark */
+.logo { display: inline-flex; align-items: center; gap: 10px; }
+.lm { flex: none; width: 34px; height: 34px; }
+.lm-t { fill: #2b4166; } .lm-b { fill: #f6f3ec; } .lm-s { fill: #e9a443; }
+footer .lm-t { fill: #f6f3ec; } footer .lm-b { fill: #2b4166; }
+.logo .lw { color: inherit; } .logo .lw span { color: #e9a443; }
+.tagline { margin: 6px 0 0; font-size: 14px; letter-spacing: .04em; color: #e9a443; }
 </style>
 </head>
 <body>
 
 <header class="nav">
   <div class="wrap">
-    <a class="logo" href="#top">Espiron<span>Future</span></a>
+    <a class="logo" href="#top" aria-label="Espiron Future home"><svg class="lm" width="34" height="34" viewBox="0 0 160 160" role="img" aria-label="Espiron Future logo mark" focusable="false"><rect class="lm-t" width="160" height="160" rx="36"/><rect class="lm-b" x="40" y="36" width="14" height="88" rx="4"/><rect class="lm-b" x="40" y="36" width="64" height="14" rx="4"/><rect class="lm-s" x="40" y="73" width="46" height="14" rx="4"/><rect class="lm-b" x="40" y="110" width="64" height="14" rx="4"/><circle class="lm-s" cx="124" cy="43" r="11"/></svg><span class="lw">Espiron<span>Future</span></span></a>
     <nav class="nav-links" aria-label="Main">
       <a href="#guides">Guides</a>
       <a href="#how">How it works</a>
@@ -933,7 +942,7 @@ a.tick-item:hover { text-decoration: underline; }
 <footer>
   <div class="wrap">
     <div>
-      <a class="logo" href="#top">Espiron<span style="color:var(--saffron)">Future</span></a>
+      <a class="logo" href="#top" aria-label="Espiron Future home"><svg class="lm" width="34" height="34" viewBox="0 0 160 160" role="img" aria-label="Espiron Future logo mark" focusable="false"><rect class="lm-t" width="160" height="160" rx="36"/><rect class="lm-b" x="40" y="36" width="14" height="88" rx="4"/><rect class="lm-b" x="40" y="36" width="64" height="14" rx="4"/><rect class="lm-s" x="40" y="73" width="46" height="14" rx="4"/><rect class="lm-b" x="40" y="110" width="64" height="14" rx="4"/><circle class="lm-s" cx="124" cy="43" r="11"/></svg><span class="lw">Espiron<span style="color:var(--saffron)">Future</span></span></a>
       <p style="margin-top:10px">www.espironfuture.com<br>Amritsar, Punjab</p>
       <div class="flinks">
         <a href="https://www.instagram.com/espironfutureofficial" target="_blank" rel="noopener">Instagram</a>
@@ -942,6 +951,7 @@ a.tick-item:hover { text-decoration: underline; }
         <button type="button" data-open-privacy>Privacy policy</button>
       </div>
     </div>
+    <p class="tagline">Aspire it. Plan it. Reach it.</p>
     <p>Espiron Future provides career counselling and admissions guidance. Admission outcomes depend on the institutions and on each student's results. &copy; 2026 Espiron Future.</p>
   </div>
 </footer>
