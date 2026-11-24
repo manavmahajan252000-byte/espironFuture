@@ -14,9 +14,9 @@
 var FEATURED = [
   {
     label: "Guide",
-    title: "Study in Germany after 12th",
-    line: "Public universities, the blocked account, language needs and how to apply, step by step.",
-    url: "study-in-germany-after-12th/",
+    title: "Courses after 12th: Science",
+    line: "Medical, engineering and other routes, with the exams and options explained simply.",
+    url: "courses-after-12th-science/",
     cta: "Read the guide"
   },
   {

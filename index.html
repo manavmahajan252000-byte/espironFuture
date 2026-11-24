@@ -418,18 +418,6 @@ a.tick-item:hover { text-decoration: underline; }
 @media (max-width: 640px) { .tick-row { gap: 8px; padding: 4px 12px; } .tick-label { font-size: 10.5px; padding: 4px 8px; } .tick-item { font-size: 14px; padding: 0 14px; } }
 @media (prefers-reduced-motion: reduce) { .tick-track, .tick-row.rev .tick-track { animation: none; } .tick-view { overflow-x: auto; } }
 
-/* Top universities by country */
-.uni { padding: 52px 0 8px; }
-.uni-tabs { display: flex; gap: 8px; flex-wrap: wrap; margin: 6px 0 16px; }
-.uni-tab { font: 600 15px var(--body); color: var(--navy); background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 8px 16px; cursor: pointer; }
-.uni-tab[aria-selected="true"] { background: var(--navy); color: #fff; border-color: var(--navy); }
-.uni-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
-.uni-list li { display: flex; align-items: center; gap: 14px; background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 12px 16px; }
-.uni-rank { flex: none; min-width: 58px; text-align: center; font: 600 14px var(--body); color: var(--navy); background: rgba(233,164,67,.24); border-radius: 999px; padding: 5px 10px; }
-.uni-name { font-weight: 600; line-height: 1.3; }
-.uni-city { display: block; font-size: 14px; color: var(--muted); font-weight: 400; }
-.uni-foot { margin: 14px 0 0; font-size: 13.5px; color: var(--muted); max-width: 52em; }
-.uni-foot a { color: var(--navy); font-weight: 600; }
 </style>
 </head>
 <body>
@@ -561,8 +549,7 @@ a.tick-item:hover { text-decoration: underline; }
   </section>
 
 
-  <div class="tick" id="ticker" aria-label="Study destinations and institutions" hidden>
-    <div class="tick-row"><span class="tick-label" title="QS World University Rankings 2027, world rank">Abroad: top 5 each</span><div class="tick-view"><div class="tick-track" id="tick-a"></div></div></div>
+  <div class="tick" id="ticker" aria-label="Institutions in Punjab and Chandigarh" hidden>
     <div class="tick-row rev"><span class="tick-label">In Punjab</span><div class="tick-view"><div class="tick-track" id="tick-p"></div></div></div>
   </div>
 
@@ -595,15 +582,10 @@ a.tick-item:hover { text-decoration: underline; }
       </div>
       <div class="pickpanel" role="tabpanel" id="pp-abroad" aria-labelledby="pk-abroad" hidden>
         <div class="ggrid">
-        <a class="ccard" href="study-abroad-after-12th/"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e9a443" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg></span><span class="lbl">Abroad</span><span class="val">Study abroad after 12th: tests, costs, visa rules</span><span class="hint">A careful guide for students and parents.</span></a>
-          <a class="ccard" href="study-in-germany-after-12th/"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e9a443" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-5.2-7-11a7 7 0 0114 0c0 5.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span class="lbl">Germany</span><span class="val">Study in Germany after 12th: Studienkolleg, APS and costs</span><span class="hint">Low tuition, but most students need a foundation year first.</span></a>
-          <a class="ccard" href="study-in-uk-after-12th/"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e9a443" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-5.2-7-11a7 7 0 0114 0c0 5.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span class="lbl">United Kingdom</span><span class="val">Study in the UK after 12th: UCAS, costs and visa rules</span><span class="hint">Main UCAS deadline for 2027 entry is 13 January 2027.</span></a>
-          <a class="ccard" href="study-in-canada-after-12th/"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e9a443" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-5.2-7-11a7 7 0 0114 0c0 5.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span class="lbl">Canada</span><span class="val">Study in Canada after 12th: study permit, costs and PGWP</span><span class="hint">A permit cap and PAL or TAL letters now apply.</span></a>
-          <a class="ccard" href="study-in-australia-after-12th/"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e9a443" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-5.2-7-11a7 7 0 0114 0c0 5.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span class="lbl">Australia</span><span class="val">Study in Australia after 12th: routes, costs and visa rules</span><span class="hint">Direct, diploma and foundation routes explained.</span></a>
-          <a class="ccard" href="study-in-usa-after-12th/"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e9a443" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-5.2-7-11a7 7 0 0114 0c0 5.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span class="lbl">USA</span><span class="val">Study in the USA after 12th: admission, costs and visa rules</span><span class="hint">SAT policies, total cost and the 2026 stay rule.</span></a>
-          <a class="ccard" href="#book" data-interest="Study abroad"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e9a443" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 01-13.4 7.8L3 21l1.3-4.4A9 9 0 1121 12z"/></svg></span><span class="lbl">Counselling</span><span class="val">Talk to a counsellor about your plan</span><span class="hint">Share your class, budget and goal. We reply on WhatsApp.</span></a>
+        <a class="ccard" href="study-abroad-after-12th/"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e9a443" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg></span><span class="lbl">Abroad</span><span class="val">Studying abroad after 12th: basic information</span><span class="hint">Questions to ask first, common tests, costs and scams to avoid.</span></a>
+          <a class="ccard" href="#book" data-interest="Study abroad"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e9a443" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 01-13.4 7.8L3 21l1.3-4.4A9 9 0 1121 12z"/></svg></span><span class="lbl">Counselling</span><span class="val">Book a session to discuss your options</span><span class="hint">Details on courses, costs and options are covered one to one. We reply on WhatsApp.</span></a>
         </div>
-        <p class="pk-note">We help you compare options and check facts. We do not promise visas or foreign admissions.</p>
+        <p class="pk-note">This page gives basic information only. We do not arrange visas, admissions or travel, and we do not promise any result.</p>
       </div>
     </div>
   </section>
@@ -617,17 +599,7 @@ a.tick-item:hover { text-decoration: underline; }
         </div>
       </div>
       <div class="feat-grid" id="feat-grid"></div>
-      <p class="feat-note">Information only. Always confirm fees, dates and entry rules on the official university page. Items marked Partner are promoted by the university.</p>
-    </div>
-  </section>
-
-  <section class="uni" id="universities" aria-labelledby="uni-h" hidden>
-    <div class="wrap">
-      <span class="eyebrow">Study abroad</span>
-      <h2 id="uni-h" style="font-size:clamp(22px,2.6vw,28px);font-weight:600;margin:4px 0 0">Top 5 universities in each country</h2>
-      <div class="uni-tabs" role="tablist" aria-label="Choose a country" id="uni-tabs"></div>
-      <ol class="uni-list" id="uni-list"></ol>
-      <p class="uni-foot" id="uni-foot"></p>
+      <p class="feat-note">Information only. Always confirm fees, dates and entry rules on the official website. Items marked Partner are promoted by the organisation named.</p>
     </div>
   </section>
 
@@ -1014,12 +986,11 @@ a.tick-item:hover { text-decoration: underline; }
   if(n)sec.hidden=false;
 })();
 </script>
-<script src="unis.js"></script>
 <script src="ticker.js"></script>
 <script>
 (function(){
   var box=document.getElementById("ticker");
-  if(!box||typeof TICKER_ABROAD==="undefined"||typeof TICKER_PUNJAB==="undefined")return;
+  if(!box||typeof TICKER_PUNJAB==="undefined")return;
   function fill(id,list){
     var tr=document.getElementById(id);if(!tr||!list||!list.length)return false;
     for(var k=0;k<2;k++){
@@ -1033,36 +1004,7 @@ a.tick-item:hover { text-decoration: underline; }
     }
     return true;
   }
-  var abroad=[],seen={};
-  if(typeof UNIS!=="undefined"){UNIS.forEach(function(c){
-    seen[c.country]=1;abroad.push({t:c.country,u:c.guide,k:"c"});
-    c.list.forEach(function(x){abroad.push({t:(x.s||x.n)+" #"+x.r});});
-  });}
-  TICKER_ABROAD.forEach(function(x){if(!seen[x.t])abroad.push(x);});
-  var a=fill("tick-a",abroad),b=fill("tick-p",TICKER_PUNJAB);
-  if(a||b)box.hidden=false;
-})();
-</script>
-<script>
-(function(){
-  var sec=document.getElementById("universities");
-  if(!sec||typeof UNIS==="undefined"||!UNIS.length)return;
-  var tabs=document.getElementById("uni-tabs"),list=document.getElementById("uni-list"),foot=document.getElementById("uni-foot");
-  function esc(t){var d=document.createElement("div");d.textContent=t==null?"":String(t);return d.innerHTML;}
-  function show(i){
-    var u=UNIS[i];
-    Array.prototype.forEach.call(tabs.children,function(b,k){b.setAttribute("aria-selected",k===i?"true":"false");});
-    list.innerHTML=u.list.map(function(x){return '<li><span class="uni-rank" title="World rank">#'+esc(x.r)+'</span><span class="uni-name">'+esc(x.n)+'<span class="uni-city">'+esc(x.c)+'</span></span></li>';}).join("");
-    foot.innerHTML='Rank shows each university\'s position in the world list: '+esc(typeof UNIS_SOURCE==="string"?UNIS_SOURCE:"")+'. A high rank does not mean a university suits your course, budget or profile, and it does not guarantee admission. Check fees, entry rules and dates on the official university page. <a href="'+esc(u.guide)+'">Read the '+esc(u.country)+' guide</a>.';
-    if(typeof gtag==="function"&&show.ready)gtag("event","uni_country_view",{country:u.country});
-    show.ready=true;
-  }
-  UNIS.forEach(function(u,i){
-    var b=document.createElement("button");b.type="button";b.className="uni-tab";b.setAttribute("role","tab");b.textContent=u.country;
-    b.addEventListener("click",function(){show(i);});
-    tabs.appendChild(b);
-  });
-  show(0);sec.hidden=false;
+  if(fill("tick-p",TICKER_PUNJAB))box.hidden=false;
 })();
 </script>
 <script>
