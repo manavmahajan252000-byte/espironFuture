@@ -427,13 +427,19 @@ a.tick-item:hover { text-decoration: underline; }
 footer .lm-t { fill: #f6f3ec; } footer .lm-b { fill: #2b4166; }
 .logo .lw { color: inherit; } .logo .lw span { color: #e9a443; }
 .tagline { margin: 6px 0 0; font-size: 14px; letter-spacing: .04em; color: #e9a443; }
+
+/* Logo tagline */
+.logo .lw { display: inline-flex; flex-direction: column; line-height: 1.05; }
+.logo .lt { font: 500 11.5px var(--body, inherit); letter-spacing: .08em; color: #a8650b; margin-top: 3px; text-transform: none; }
+footer .logo .lt, .gfoot .logo .lt { color: #e9a443; }
+@media (max-width: 560px) { .logo .lt { display: none; } }
 </style>
 </head>
 <body>
 
 <header class="nav">
   <div class="wrap">
-    <a class="logo" href="#top" aria-label="Espiron Future home"><svg class="lm" width="34" height="34" viewBox="0 0 160 160" role="img" aria-label="Espiron Future logo mark" focusable="false"><rect class="lm-t" width="160" height="160" rx="36"/><rect class="lm-b" x="40" y="36" width="14" height="88" rx="4"/><rect class="lm-b" x="40" y="36" width="64" height="14" rx="4"/><rect class="lm-s" x="40" y="73" width="46" height="14" rx="4"/><rect class="lm-b" x="40" y="110" width="64" height="14" rx="4"/><circle class="lm-s" cx="124" cy="43" r="11"/></svg><span class="lw">Espiron<span>Future</span></span></a>
+    <a class="logo" href="#top" aria-label="Espiron Future home"><svg class="lm" width="34" height="34" viewBox="0 0 160 160" role="img" aria-label="Espiron Future logo mark" focusable="false"><rect class="lm-t" width="160" height="160" rx="36"/><rect class="lm-b" x="40" y="36" width="14" height="88" rx="4"/><rect class="lm-b" x="40" y="36" width="64" height="14" rx="4"/><rect class="lm-s" x="40" y="73" width="46" height="14" rx="4"/><rect class="lm-b" x="40" y="110" width="64" height="14" rx="4"/><circle class="lm-s" cx="124" cy="43" r="11"/></svg><span class="lw">Espiron<span>Future</span><span class="lt">Aspire it. Plan it. Reach it.</span></span></a>
     <nav class="nav-links" aria-label="Main">
       <a href="#guides">Guides</a>
       <a href="#how">How it works</a>
@@ -942,7 +948,7 @@ footer .lm-t { fill: #f6f3ec; } footer .lm-b { fill: #2b4166; }
 <footer>
   <div class="wrap">
     <div>
-      <a class="logo" href="#top" aria-label="Espiron Future home"><svg class="lm" width="34" height="34" viewBox="0 0 160 160" role="img" aria-label="Espiron Future logo mark" focusable="false"><rect class="lm-t" width="160" height="160" rx="36"/><rect class="lm-b" x="40" y="36" width="14" height="88" rx="4"/><rect class="lm-b" x="40" y="36" width="64" height="14" rx="4"/><rect class="lm-s" x="40" y="73" width="46" height="14" rx="4"/><rect class="lm-b" x="40" y="110" width="64" height="14" rx="4"/><circle class="lm-s" cx="124" cy="43" r="11"/></svg><span class="lw">Espiron<span style="color:var(--saffron)">Future</span></span></a>
+      <a class="logo" href="#top" aria-label="Espiron Future home"><svg class="lm" width="34" height="34" viewBox="0 0 160 160" role="img" aria-label="Espiron Future logo mark" focusable="false"><rect class="lm-t" width="160" height="160" rx="36"/><rect class="lm-b" x="40" y="36" width="14" height="88" rx="4"/><rect class="lm-b" x="40" y="36" width="64" height="14" rx="4"/><rect class="lm-s" x="40" y="73" width="46" height="14" rx="4"/><rect class="lm-b" x="40" y="110" width="64" height="14" rx="4"/><circle class="lm-s" cx="124" cy="43" r="11"/></svg><span class="lw">Espiron<span style="color:var(--saffron)">Future</span><span class="lt">Aspire it. Plan it. Reach it.</span></span></a>
       <p style="margin-top:10px">www.espironfuture.com<br>Amritsar, Punjab</p>
       <div class="flinks">
         <a href="https://www.instagram.com/espironfutureofficial" target="_blank" rel="noopener">Instagram</a>
@@ -951,7 +957,6 @@ footer .lm-t { fill: #f6f3ec; } footer .lm-b { fill: #2b4166; }
         <button type="button" data-open-privacy>Privacy policy</button>
       </div>
     </div>
-    <p class="tagline">Aspire it. Plan it. Reach it.</p>
     <p>Espiron Future provides career counselling and admissions guidance. Admission outcomes depend on the institutions and on each student's results. &copy; 2026 Espiron Future.</p>
   </div>
 </footer>
